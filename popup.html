@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Tab Manager Pro</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header class="app-header">
+      <div class="logo">
+        <i class="fas fa-layer-group"></i>
+        <h1>Tab Manager Pro</h1>
+      </div>
+      <div class="header-actions">
+        <button id="settingsBtn" class="icon-btn">
+          <i class="fas fa-cog"></i>
+        </button>
+      </div>
+    </header>
+
+    <div class="search-section">
+      <div class="search-bar">
+        <i class="fas fa-search"></i>
+        <input type="text" id="searchTabs" placeholder="Sekmelerde ara...">
+        <button id="clearSearch" class="icon-btn">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="main-actions">
+      <button id="newCategoryBtn" class="action-btn">
+        <i class="fas fa-folder-plus"></i>
+        Yeni Kategori
+      </button>
+      <button id="getCurrentTabs" class="action-btn">
+        <i class="fas fa-file-import"></i>
+        Sekmeleri Ekle
+      </button>
+      <div class="dropdown">
+        <button id="moreActions" class="action-btn">
+          <i class="fas fa-ellipsis-h"></i>
+          Diğer
+        </button>
+        <div class="dropdown-content">
+          <button id="exportData">
+            <i class="fas fa-file-export"></i>
+            Dışa Aktar
+          </button>
+          <button id="importData">
+            <i class="fas fa-file-import"></i>
+            İçe Aktar
+          </button>
+          <button id="sortTabs">
+            <i class="fas fa-sort"></i>
+            Sırala
+          </button>
+          <button id="cleanupTabs">
+            <i class="fas fa-broom"></i>
+            Temizle
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats-bar">
+      <div class="stat-item">
+        <i class="fas fa-folder"></i>
+        <span id="totalCategories">0 Kategori</span>
+      </div>
+      <div class="stat-item">
+        <i class="fas fa-table"></i>
+        <span id="totalTabs">0 Sekme</span>
+      </div>
+      <div class="stat-item">
+        <i class="fas fa-clock"></i>
+        <span id="lastSync">Son Güncelleme: Az Önce</span>
+      </div>
+    </div>
+
+    <div class="categories-container">
+      <div id="categoryList" class="category-list"></div>
+    </div>
+
+    <div id="settingsPanel" class="settings-panel">
+      <div class="settings-header">
+        <h3>Ayarlar</h3>
+        <button id="closeSettings" class="icon-btn close-btn">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="settings-content">
+        <div class="setting-item">
+          <label for="darkMode">Karanlık Mod</label>
+          <input type="checkbox" id="darkMode">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
